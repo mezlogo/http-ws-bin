@@ -1,0 +1,6 @@
+body {
+    background-color: aqua;
+}
+hr.solid {
+    border-top: 3px solid pink;
+}

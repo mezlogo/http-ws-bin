@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Person</title>
+        <link rel="stylesheet" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <img src="logo.png" width="100px" height="100px">
+        <div th:each="person : ${persons}">
+            <span th:text="${person.name}"/>
+            <a th:href="@{/rest/rmperson(name=${person.name})}">rm</a>
+        </div>
+    </body>
+</html>
