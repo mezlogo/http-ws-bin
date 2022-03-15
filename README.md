@@ -18,3 +18,9 @@ Simple http/websockets service for testing purposes
 - cookies
 - custom headers
 - tls
+
+## How to build adn deploy docker image to hub
+1. sign in docker client to docker hub: `docker login -u $USERNAME`
+2. build an image with version tag: `docker build -t $USERNAME/http-ws-bin:$VERSION .`
+3. test container: `docker run --rm -p 8443:8443 $USERNAME/http-ws-bin:$VERSION`
+4. publish: `docker push $USERNAME/http-ws-bin:$VERSION`
